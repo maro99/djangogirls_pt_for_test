@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +11,12 @@
 <body>
 
     <h2>render worked well</h2>
+
+    {% for post in posts %}
+        <h1>{{post.title}}</h1>
+        <div> {{post.text}}</div>
+        <h3>{{post.created_date}}</h3>
+    {% endfor %}
 
 </body>
 </html>
