@@ -6,4 +6,5 @@ from django.shortcuts import render
 
 def post_list(requst):
 
-    return HttpResponse('post-list-page')
+
+    return render(requst,'blog/post_list.html')
