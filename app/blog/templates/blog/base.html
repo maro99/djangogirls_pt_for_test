@@ -15,7 +15,9 @@
 
     <div class="container">
         <h2 class = "mt-4 mb-4"><a href="{% url 'post-list' %}">Djnago-girls</a></h2>
-
+        <div class="text-right mb-2">
+            <button class="btn btn-secondary "><a href="{% url 'post-create' %}"> 글쓰기</a></button>
+        </div>
             {% block content %}
 
             {% endblock %}

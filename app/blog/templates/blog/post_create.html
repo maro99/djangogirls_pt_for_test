@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<form action="">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name = 'title' class = 'form-control'>
+    </div>
+
+    <div class="from-group">
+        <label for="text"> Text</label>
+        <textarea name="text" id="" cols="30" rows="10" class = 'form-control'></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" class="form-control">작성</button>
+
+</form>
+{% endblock %}
