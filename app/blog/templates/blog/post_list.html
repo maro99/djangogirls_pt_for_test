@@ -20,8 +20,8 @@
             <div class="card mb-3">
                 <div class="card-body mb-3">
                     <h4 class="card-title">{{post.title}}</h4>
-                    <p class="card-text">{{post.text}}</p>
-                    <h6 class="card-subtitle text-muted mb-3 text-right">{{post.created_date}}</h6>
+                    <p class="card-text ">{{post.text  | truncatechars:100 | linebreaksbr }}</p>
+                    <h6 class="card-subtitle text-muted mb-3 text-right ">{{post.created_date}}</h6>
                 </div>
             </div>
         {% endfor %}
