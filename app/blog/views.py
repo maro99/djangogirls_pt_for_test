@@ -43,3 +43,10 @@ def post_create(request):
         return redirect('post-list')
 
     return render(request, 'blog/post_create.html')
+
+
+def post_delete(request,post_id):
+
+    Post.objects.get(id=post_id).delete()
+
+    return redirect('post-list')
