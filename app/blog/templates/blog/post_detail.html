@@ -1,0 +1,29 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class = "mt-4 mb-4">Djnago-girls</h2>
+
+            <div class="card mb-3">
+                <div class="card-body mb-3">
+                    <h4 class="card-title">{{post.title}}</h4>
+                    <p class="card-text ">{{post.text  | linebreaksbr }}</p>
+                    <h6 class="card-subtitle text-muted mb-3 text-right ">{{post.created_date}}</h6>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
