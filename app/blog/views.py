@@ -50,3 +50,25 @@ def post_delete(request,post_id):
     Post.objects.get(id=post_id).delete()
 
     return redirect('post-list')
+
+
+def post_edit(request, post_id):
+
+    post = Post.objects.get(id=post_id)
+
+    if request.method =='POST':
+        title=request.POST.get('title')
+        text=request.POST.get('text')
+
+        post.title=title
+        post.text=text
+        post.save()
+
+        return redirect('post-detail',post_id)
+    else:
+
+
+        context={
+            'post':post,
+        }
+        return render(request,'blog/post_edit.html',context)
